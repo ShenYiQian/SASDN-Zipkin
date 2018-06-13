@@ -26,6 +26,7 @@ class Trace {
     init(serviceInfo) {
         const infoDefaults = {
             transType: 'FILE',
+            encodeType: 'STRING',
             filePath: LibPath.join(__dirname, 'zipkin.log')
         };
         const infoOpts = Object.assign({}, infoDefaults, serviceInfo || {});

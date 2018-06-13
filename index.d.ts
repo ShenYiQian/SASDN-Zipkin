@@ -15,6 +15,7 @@ export enum ZIPKIN_EVENT {
 
 export interface ServiceInfo {
   transType?: 'FILE' | 'KAFKA' | 'HTTP';
+  encodeType?: 'STRING' | 'JSON';
   url?: string;
   serviceName?: string;
   host?: string;

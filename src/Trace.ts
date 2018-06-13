@@ -7,6 +7,7 @@ import * as LibPath from 'path';
 
 export interface ServiceInfo {
   transType?: 'FILE' | 'KAFKA' | 'HTTP';
+  encodeType?: 'STRING' | 'JSON';
   url?: string;
   serviceName?: string;
   host?: string;
@@ -44,6 +45,7 @@ export class Trace {
   public init(serviceInfo: ServiceInfo): void {
     const infoDefaults = {
       transType: 'FILE',
+      encodeType: 'STRING',
       filePath: LibPath.join(__dirname, 'zipkin.log')
     } as ServiceInfo;
 
